@@ -129,25 +129,4 @@ echo "Copying pipewire_config file to $destination_path..."
 sudo cp "$pipewire_config_file_path" "$destination_path"
 echo "pipewire_config file copied successfully."
 
-
-################
-## GPU Driver ##
-################
-
-# Install GPU-specific packages
-if [ "$gpu_type" == "AMD" ]; then
-    echo "Installing packages for AMD GPU..."
-    paru -S --noconfirm mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon libva-mesa-driver mesa-vdpau lib32-libva-mesa-driver lib32-mesa-vdpau
-elif [ "$gpu_type" == "NVIDIA" ]; then
-    echo "Installing packages for NVIDIA GPU..."
-    # Add your NVIDIA-specific package installations here
-    # paru -S nvidia-package-name
-elif [ "$gpu_type" == "SKIP" ]; then
-    echo "Skipping GPU-specific package installation."
-else
-    echo "Unknown GPU type. Continuing without GPU-specific packages."
-fi
-echo "Installation process completed."
-
-
 reboot

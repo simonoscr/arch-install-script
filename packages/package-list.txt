@@ -1,0 +1,6 @@
+- vim
+- steam
+- brave-bin
+- gamemode
+- gamescope
+- mesa

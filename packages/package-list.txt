@@ -4,3 +4,4 @@
 - gamemode
 - gamescope
 - mesa
+- yadm

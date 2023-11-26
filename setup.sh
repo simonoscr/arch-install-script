@@ -84,6 +84,12 @@ echo "Installation of applications completed."
 ## COPY Config Files ##
 #######################
 
+## Dotfiles yadm
+cd ~
+yadm clone https://github.com/simonoscr/dotfiles.git
+yadm submodule init
+yadm submodule update
+
 ## DRI
 dri_config_file_path="/conf/.drirc"
 destination_path="$HOME/.drirc"
